@@ -25,13 +25,13 @@ API.interceptors.response.use(
   }
 );
 
-export const loginUser = (data) => API.post("/auth/login", data);
-export const registerUser = (data) => API.post("/auth/register", data);
+export const loginUser = (data) => API.post("/api/auth/login", data);
+export const registerUser = (data) => API.post("/api/auth/register", data);
 export const uploadPDF = (formData, token) =>
-  API.post("/pdf/upload", formData, { headers: { Authorization: token } });
-export const getUserPDFs = () => API.get("/pdf");
+  API.post("/api/pdf/upload", formData, { headers: { Authorization: token } });
+export const getUserPDFs = () => API.get("/api/pdf");
 export const sharePDF = (data, token) =>
-  API.post("/pdf/share", data, { headers: { Authorization: token } });
-export const getSharedPDF = (link) => API.get(`/pdf/shared/${link}`);
-export const addComment = (data) => API.post("/comments", data);
-export const getComments = (pdfId) => API.get(`/comments/${pdfId}`);
+  API.post("/api/pdf/share", data, { headers: { Authorization: token } });
+export const getSharedPDF = (link) => API.get(`/api/pdf/shared/${link}`);
+export const addComment = (data) => API.post("/api/comments", data);
+export const getComments = (pdfId) => API.get(`/api/comments/${pdfId}`);
