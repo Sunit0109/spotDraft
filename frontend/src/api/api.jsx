@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://spotdraft-1x72.onrender.com",
 });
 
 // Add request interceptor for tokens
